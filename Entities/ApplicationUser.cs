@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using THPCore.Enums;
 
 namespace THPIdentity.Entities;
@@ -14,6 +15,7 @@ public class ApplicationUser : IdentityUser
     public int Amount { get; set; }
     public string? Name { get; set; }
     public int? Gender { get; set; }
+    [StringLength(512)]
     public string? ClassName { get; set; }
     public UserStatus Status { get; set; }
 }
