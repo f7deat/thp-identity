@@ -16,6 +16,7 @@ public class ApplicationUser : IdentityUser
     public string? Name { get; set; }
     public int? Gender { get; set; }
     [StringLength(512)]
+    public string? ClassCode { get; set; }
     public string? ClassName { get; set; }
     public UserStatus Status { get; set; }
 }
