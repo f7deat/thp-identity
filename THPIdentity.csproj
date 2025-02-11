@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>THPIdentity</PackageId>
-		<Version>1.0.1</Version>
+		<Version>1.0.2</Version>
 		<Authors>f7deat</Authors>
 		<Description>Identity for Hai Phong University.</Description>
 		<RepositoryUrl>https://github.com/f7deat/thp-identity</RepositoryUrl>

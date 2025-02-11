@@ -19,6 +19,8 @@ public class ApplicationUser : IdentityUser
     public string? ClassCode { get; set; }
     public string? ClassName { get; set; }
     public UserStatus Status { get; set; }
+    public string? DeviceToken { get; set; }
+    public int? CityId { get; set; }
 }
 
 public enum UserStatus
