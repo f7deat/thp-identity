@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
-using THPCore.Enums;
 
 namespace THPIdentity.Entities;
 
@@ -21,6 +20,8 @@ public class ApplicationUser : IdentityUser
     public UserStatus Status { get; set; }
     public string? DeviceToken { get; set; }
     public int? CityId { get; set; }
+
+    public ICollection<UserDetail>? UserDetails { get; set; }
 }
 
 public enum UserStatus
@@ -49,4 +50,20 @@ public enum UserStatus
     /// Tốt nghiệp
     /// </summary>
     Alumni
+}
+
+public enum UserType
+{
+    [Display(Name = "Sinh viên")]
+    Student,
+    [Display(Name = "Giảng viên")]
+    Lecturer,
+    [Display(Name = "Trưởng bộ môn")]
+    Leader,
+    [Display(Name = "Trưởng Khoa")]
+    Dean,
+    [Display(Name = "Phó trưởng đơn vị")]
+    Deputy,
+    [Display(Name = "Ban giám hiệu")]
+    Administrator
 }

@@ -4,4 +4,4 @@
 
 ### Đăng tải phiên bản mới lên NuGet.org
 
-`dotnet nuget push bin/Release/THPIdentity.1.0.2.nupkg --api-key YOUR_API_KEY --source https://api.nuget.org/v3/index.json`
+`dotnet nuget push bin/Release/THPIdentity.1.0.3.nupkg --api-key YOUR_API_KEY --source https://api.nuget.org/v3/index.json`
