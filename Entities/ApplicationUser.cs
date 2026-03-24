@@ -1,25 +1,25 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace THPIdentity.Entities;
 
 public class ApplicationUser : IdentityUser
 {
+    [StringLength(2048)]
     public string? Avatar { get; set; }
     public int? DepartmentId { get; set; }
     public UserType UserType { get; set; }
     public string? Address { get; set; }
     public DateTime? DateOfBirth { get; set; }
-    public int? SubDepartmentId { get; set; }
-    public int Amount { get; set; }
+    [Column(TypeName = "money")]
+    public decimal Amount { get; set; }
     public string? Name { get; set; }
-    public int? Gender { get; set; }
-    [StringLength(512)]
-    public string? ClassCode { get; set; }
-    public string? ClassName { get; set; }
+    public bool? Gender { get; set; }
     public UserStatus Status { get; set; }
     public string? DeviceToken { get; set; }
-    public int? CityId { get; set; }
+    public int? DistrictId { get; set; }
+    public string? CitizenId { get; set; }
 
     public ICollection<UserDetail>? UserDetails { get; set; }
 }
@@ -65,5 +65,7 @@ public enum UserType
     [Display(Name = "Phó trưởng đơn vị")]
     Deputy,
     [Display(Name = "Ban giám hiệu")]
-    Administrator
+    Administrator,
+    [Display(Name = "Ứng viên")]
+    Candidate
 }
